@@ -1,4 +1,4 @@
-# This Python file uses the following encoding: utf-8
+# Este archivo se usa para la conexión con la BD (PostgreSQL - Railway)
 import psycopg2
 
 class BD:
@@ -34,6 +34,15 @@ class BD:
 
     def leerUltRegistro(self): #Lee el ultimo registro
         query = "SELECT b.letra FROM Registros r JOIN Bloques b ON r.letraID = b.id ORDER BY id LIMIT 1"
+        try:
+            self.cursor.execute(query)
+            return self.cursor.fetchall()
+        except Exception as e:
+            print("Error al leer: ", e)
+            return []
+
+    def leerUlt3Registros(self): #Lee el ultimo registro
+        query = "SELECT b.letra FROM Registros r JOIN Bloques b ON r.letraID = b.id ORDER BY registro_id DESC LIMIT 3"
         try:
             self.cursor.execute(query)
             return self.cursor.fetchall()

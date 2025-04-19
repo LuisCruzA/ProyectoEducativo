@@ -3,8 +3,10 @@ import sys
 import os
 import resources_rc
 from PySide6.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout
-from PySide6.QtGui import QFontDatabase, QFont
+from PySide6.QtGui import QFontDatabase, QFont, QCursor
+from PySide6.QtCore import Qt
 from conexion_BD import BD
+from funciones_EJ import AsignarLetras, incializarEJ
 
 # Important:
 # You need to run the following command to generate the ui_form.py file
@@ -20,12 +22,6 @@ class Widget(QWidget):
 
         # Pantalla completa
         self.showFullScreen()
-        self.label = QLabel(self)
-        self.label.setScaledContents(True)  # Escalar imagen
-        layout = QVBoxLayout(self)
-        layout.setContentsMargins(0, 0, 0, 0)
-        layout.addWidget(self.label)
-        self.setLayout(layout)
 
         # Fuente personalizada
         font_path = os.path.join(os.path.dirname(__file__), "fonts", "Baloo2-Bold.ttf")
@@ -37,19 +33,50 @@ class Widget(QWidget):
         else:
             print("No se pudo cargar la fuente personalizada.")
 
+        #Botón Salir
+        self.ui.Salir.clicked.connect(self.close)
+        self.ui.Salir.setCursor(QCursor(Qt.PointingHandCursor))
+        self.ui.Salir.setStyleSheet("""
+                        QPushButton {
+                        background-color: transparent;
+                        border: none;
+                    }
+
+                        QPushButton:hover {
+                        background-color: transparent;
+                        border: none;
+                        padding-bottom: 5px;
+                        padding-top: 15px;
+                    }""")
+        #Botón Revisar
+        self.ui.Revisar.setCursor(QCursor(Qt.PointingHandCursor))
+        self.ui.Revisar.setStyleSheet("""
+                        QPushButton {
+                        background-color: transparent;
+                        border: none;
+                    }
+
+                        QPushButton:hover {
+                        background-color: transparent;
+                        border: none;
+                        padding-bottom: 5px;
+                        padding-top: 15px;
+                    }""")
+        self.ui.Revisar.clicked.connect(lambda:AsignarLetras(self,'S', 'O', 'L'))
+
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     """
-    bd = BD()
     with BD() as db:
-            print("Última letra insertada:", db.leerUltRegistro())
-            print("Insertando letra con ID 5 (E):", db.insertarRegistro(5))
-            print("Última letra insertada:", db.leerUltRegistro())
+            print("Insertando letra con ID 20 (S):", db.insertarRegistro(8))
+            print("Insertando letra con ID 16 (O):", db.insertarRegistro(4))
+            print("Insertando letra con ID 12 (L):", db.insertarRegistro(15))
     """
 
     widget = Widget()
+    incializarEJ(widget)
     widget.show()
     sys.exit(app.exec())

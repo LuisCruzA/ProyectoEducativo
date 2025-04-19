@@ -3,6 +3,7 @@
         "widget.py",
         "form.ui",
         "resources.qrc",
-        "conexion_BD.py"
+        "conexion_BD.py",
+        "funciones_EJ.py"
     ]
 }
