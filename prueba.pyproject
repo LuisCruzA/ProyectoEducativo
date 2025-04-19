@@ -1,0 +1,8 @@
+{
+    "files": [
+        "widget.py",
+        "form.ui",
+        "resources.qrc",
+        "conexion_BD.py"
+    ]
+}
