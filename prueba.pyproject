@@ -4,6 +4,10 @@
         "form.ui",
         "resources.qrc",
         "conexion_BD.py",
-        "funciones_EJ.py"
+        "funciones_EJ.py",
+        "menu_principal.ui",
+        "ej2.ui",
+        "form2.ui",
+        "InputTest.py"
     ]
 }

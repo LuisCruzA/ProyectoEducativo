@@ -35,6 +35,11 @@
         <file>assets/Images/16.png</file>
         <file>assets/Images/17.png</file>
         <file>assets/Images/18.png</file>
+        <file>assets/Images/19.png</file>
+        <file>assets/Images/20.png</file>
+        <file>assets/Images/21.png</file>
+        <file>assets/Images/22.png</file>
+        <file>assets/Images/23.png</file>
     </qresource>
     <qresource prefix="/iconos">
         <file>assets/Iconos/1.png</file>
@@ -45,5 +50,38 @@
         <file>assets/Iconos/6.png</file>
         <file>assets/Iconos/7.png</file>
         <file>assets/Iconos/8.png</file>
+    </qresource>
+    <qresource prefix="/Audios">
+        <file>assets/Audios/AVANZADO1.mp3</file>
+        <file>assets/Audios/AVANZADO2.mp3</file>
+        <file>assets/Audios/AVANZADO3.mp3</file>
+        <file>assets/Audios/AVANZADO4.mp3</file>
+        <file>assets/Audios/AVANZADO5.mp3</file>
+        <file>assets/Audios/BALERO.mp3</file>
+        <file>assets/Audios/BOTA.mp3</file>
+        <file>assets/Audios/BUENO1.mp3</file>
+        <file>assets/Audios/BUENO2.mp3</file>
+        <file>assets/Audios/BUENO3.mp3</file>
+        <file>assets/Audios/BUENO4.mp3</file>
+        <file>assets/Audios/BUENO5.mp3</file>
+        <file>assets/Audios/BUENO6.mp3</file>
+        <file>assets/Audios/BUENO7.mp3</file>
+        <file>assets/Audios/LO.mp3</file>
+        <file>assets/Audios/MA.mp3</file>
+        <file>assets/Audios/MALO1.mp3</file>
+        <file>assets/Audios/MALO2.mp3</file>
+        <file>assets/Audios/MALO3.mp3</file>
+        <file>assets/Audios/MALO4.mp3</file>
+        <file>assets/Audios/MALO5.mp3</file>
+        <file>assets/Audios/MAR.mp3</file>
+        <file>assets/Audios/MESA.mp3</file>
+        <file>assets/Audios/PATO.mp3</file>
+        <file>assets/Audios/PE.mp3</file>
+        <file>assets/Audios/PELOTA.mp3</file>
+        <file>assets/Audios/RED.mp3</file>
+        <file>assets/Audios/RIO.mp3</file>
+        <file>assets/Audios/SAL.mp3</file>
+        <file>assets/Audios/SOL.mp3</file>
+        <file>assets/Audios/SU.mp3</file>
     </qresource>
 </RCC>
